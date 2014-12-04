@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--
+
+    THIS CODE AND INFORMATION ARE PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESSED OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE IMPLIED WARRANTIES OF MERCHANTABILITY AND/OR FITNESS
+    FOR A PARTICULAR PURPOSE. THIS CODE AND INFORMATION ARE NOT SUPPORTED BY XEBIALABS.
+
+-->
+<synthetic xsi:schemaLocation="http://www.xebialabs.com/deployit/synthetic synthetic.xsd" xmlns="http://www.xebialabs.com/deployit/synthetic" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+
+<type type="XLrelease.Server" extends="configuration.HttpConnection"/>
+
+
+    <type type="versionOne.SetupVersionOne" extends="xlrelease.PythonScript">
+        <property name="xlruser"  category="input" label="XL Release User" required="true" description="This user must have permissions to configure XL Release."/>
+        <property name="xlrpassword"  category="input" label="XL Release Password" required="true" password="true"/>
+        <property name="v1url" category="input" required="true" label="Version One URL"/>
+        <property name="v1title" category="input" required="true" label="Version One Display Name"/>
+        <property name="client_id" category="input" required="true" label="Client ID"/>
+        <property name="client_secret" category="input" required="true" password="true" label="Client Secret"/>
+        <property name="auth_code" category="input" required="true" label="Authorization Code"/>
+        <property name="redirect_uri" category="input" hidden="true" default="urn:ietf:wg:oauth:2.0:oob"/>
+        <property name="scope" category="input" hidden="true" default="apiv1"/>
+        <property name="grant_type" category="input" hidden="true" default="authorization_code"/>
+    </type>
+
+    <type type="versionOne.Server" extends="configuration.HttpConnection">
+        <property name="client_id" required="false" label="Client ID" />
+        <property name="client_secret" required="false" label="Client Secret" password="true" />
+        <property name="oauthRefreshToken" required="false" label="Refresh Token" password="true" />
+    </type>
+
+    <type type="versionOne.CreateIssue" extends="xlrelease.PythonScript">
+        <property name="versionOneServer" category="input" label="Server" referenced-type="versionOne.Server" kind="ci"/>
+        <property name="oauthRefreshToken" category="input"/>
+    </type>
+
+</synthetic>
