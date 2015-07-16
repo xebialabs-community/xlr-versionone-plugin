@@ -1,0 +1,15 @@
+language: java
+notifications:
+  hipchat:
+    rooms:
+      secure: gm/LP/t2BHR0y3ydcoWLtRtolMCPAX2gnmLvR1FjDFraLaTgf8oo586Moj4uBCcwhVCkDRI3qR8g/SXKm+D6NBIpngwKSVEA7HHjtN++9OjNlnsY5hDasVbAwJ5cgfwTFQ09otgPQMqI63aV+HZ5isdNvIZd5fAmPqvtDAoerLY=
+deploy:
+  provider: releases
+  api_key:
+    secure: ci1Ja2njoWo/LS3JV1cLH0nHLqVQVH3nIUXEQ23cYlDbkblvVO2Eecfv8XA43O+56pNcUmKBOecSFnYWGfc/mTEKUNs1Cx8BLhalDXXeYonoJaCEhxylwmsKSk5QeZNLN+yNVQGTVbXmQ/cBu9Conmyiof35zzxpWs4vbfVTn3U=
+  file: build/libs/xlr-versionone-plugin-1.0.0.jar
+  skip_cleanup: true
+  on:
+    all_branches: true
+    tags: true
+    repo: xebialabs-community/xlr-versionone-plugin
