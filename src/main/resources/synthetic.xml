@@ -25,15 +25,15 @@
         <property name="grant_type" category="input" hidden="true" default="authorization_code"/>
     </type>
 
+    <type type="versionOne.CreateIssue" extends="xlrelease.PythonScript">
+        <property name="versionOneServer" category="input" label="Server" referenced-type="versionOne.Server" kind="ci"/>
+        <property name="oauthRefreshToken" category="input"/>
+    </type>
+
     <type type="versionOne.Server" extends="configuration.HttpConnection">
         <property name="client_id" required="false" label="Client ID" />
         <property name="client_secret" required="false" label="Client Secret" password="true" />
         <property name="oauthRefreshToken" required="false" label="Refresh Token" password="true" />
-    </type>
-
-    <type type="versionOne.CreateIssue" extends="xlrelease.PythonScript">
-        <property name="versionOneServer" category="input" label="Server" referenced-type="versionOne.Server" kind="ci"/>
-        <property name="oauthRefreshToken" category="input"/>
     </type>
 
 </synthetic>
