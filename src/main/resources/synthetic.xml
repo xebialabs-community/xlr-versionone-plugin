@@ -8,32 +8,23 @@
 -->
 <synthetic xsi:schemaLocation="http://www.xebialabs.com/deployit/synthetic synthetic.xsd" xmlns="http://www.xebialabs.com/deployit/synthetic" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 
+    <type type="versionone.CreateIssue" extends="xlrelease.PythonScript">
+        <property name="iconLocation" default="versionone/versionone-logo.png" hidden="true" />
+        <property name="taskColor" hidden="true" default="#7c2348" />
 
-<type type="XLrelease.Server" extends="configuration.HttpConnection"/>
+        <property name="versionOneServer" category="input" label="Server" referenced-type="versionone.Server" kind="ci"/>
+        <property name="assetType" category="input" description="For a list of possible values, see https://community.versionone.com/Developers/Developer-Library/Concepts/Asset_Type"/>
+        <property name="projectId" category="input" description="The oid of the project you want to create the issue for, f.e. Scope:1535"/>
+        <property name="attributes" category="input" kind="map_string_string" description="Map of key / value pairs" />
 
-
-    <type type="versionOne.SetupVersionOne" extends="xlrelease.PythonScript">
-        <property name="xlruser"  category="input" label="XL Release User" required="true" description="This user must have permissions to configure XL Release."/>
-        <property name="xlrpassword"  category="input" label="XL Release Password" required="true" password="true"/>
-        <property name="v1url" category="input" required="true" label="Version One URL"/>
-        <property name="v1title" category="input" required="true" label="Version One Display Name"/>
-        <property name="client_id" category="input" required="true" label="Client ID"/>
-        <property name="client_secret" category="input" required="true" password="true" label="Client Secret"/>
-        <property name="auth_code" category="input" required="true" label="Authorization Code"/>
-        <property name="redirect_uri" category="input" hidden="true" default="urn:ietf:wg:oauth:2.0:oob"/>
-        <property name="scope" category="input" hidden="true" default="apiv1"/>
-        <property name="grant_type" category="input" hidden="true" default="authorization_code"/>
+        <property name="token" category="output" description="Output token which is the oid reference."/>
     </type>
 
-    <type type="versionOne.CreateIssue" extends="xlrelease.PythonScript">
-        <property name="versionOneServer" category="input" label="Server" referenced-type="versionOne.Server" kind="ci"/>
-        <property name="oauthRefreshToken" category="input"/>
+
+    <type type="versionone.Server" extends="xlrelease.Configuration">
+        <property name="instanceUrl" required="true" label="Instance Url" description="The Instance URL is the URL that you use for your VersionOne instance and is typically in the form of http(s)://server name/instance name."/>
+        <property name="accessToken" required="true" label="Access Token"  password="true" description="The access token associated with the VersionOne member account that you want to connect with" />
     </type>
 
-    <type type="versionOne.Server" extends="configuration.HttpConnection">
-        <property name="client_id" required="false" label="Client ID" />
-        <property name="client_secret" required="false" label="Client Secret" password="true" />
-        <property name="oauthRefreshToken" required="false" label="Refresh Token" password="true" />
-    </type>
 
 </synthetic>
