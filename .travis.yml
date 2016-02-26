@@ -8,7 +8,7 @@ deploy:
   provider: releases
   api_key:
     secure: ci1Ja2njoWo/LS3JV1cLH0nHLqVQVH3nIUXEQ23cYlDbkblvVO2Eecfv8XA43O+56pNcUmKBOecSFnYWGfc/mTEKUNs1Cx8BLhalDXXeYonoJaCEhxylwmsKSk5QeZNLN+yNVQGTVbXmQ/cBu9Conmyiof35zzxpWs4vbfVTn3U=
-  file: build/libs/xlr-versionone-plugin-1.0.0.jar
+  file: build/libs/xlr-versionone-plugin-1.0.1.jar
   skip_cleanup: true
   on:
     all_branches: true
