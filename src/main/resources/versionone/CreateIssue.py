@@ -3,12 +3,6 @@
 # IMPLIED, INCLUDING BUT NOT LIMITED TO THE IMPLIED WARRANTIES OF MERCHANTABILITY AND/OR FITNESS
 # FOR A PARTICULAR PURPOSE. THIS CODE AND INFORMATION ARE NOT SUPPORTED BY XEBIALABS.
 #
-
-#
-# THIS CODE AND INFORMATION ARE PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESSED OR
-# IMPLIED, INCLUDING BUT NOT LIMITED TO THE IMPLIED WARRANTIES OF MERCHANTABILITY AND/OR FITNESS
-# FOR A PARTICULAR PURPOSE. THIS CODE AND INFORMATION ARE NOT SUPPORTED BY XEBIALABS.
-#
 import time
 from com.versionone.apiclient import V1Connector
 from com.versionone.apiclient import Services
@@ -18,7 +12,7 @@ if versionOneServer is None:
     sys.exit(1)
 
 conn = V1Connector()
-connector = conn.withInstanceUrl(versionOneServer['instanceUrl']).withUserAgentHeader("XL Release", str(time.time())).withAccessToken(versionOneServer['accessToken']).build()
+connector = conn.withInstanceUrl(versionOneServer['url']).withUserAgentHeader("XL Release", str(time.time())).withAccessToken(versionOneServer['accessToken']).build()
 services = Services(connector)
 
 print "Received projectId ", projectId

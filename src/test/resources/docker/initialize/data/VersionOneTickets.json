@@ -1,0 +1,137 @@
+[
+{
+   "$createdAt" : "2017-03-01T06:08:10.555+0000",
+   "queryableStartDate" : "2017-02-27T14:00:00Z",
+   "tags" : [],
+   "$createdBy" : "admin",
+   "status" : "TEMPLATE",
+   "abortOnFailure" : false,
+   "maxConcurrentReleases" : 100,
+   "phases" : [
+      {
+         "$createdAt" : "2017-03-01T06:08:10.555+0000",
+         "title" : "New Phase",
+         "$lastModifiedBy" : "admin",
+         "release" : "Applications/Release874779676",
+         "flagStatus" : "OK",
+         "id" : "Applications/Release874779676/Phase850654443",
+         "$createdBy" : "admin",
+         "status" : "PLANNED",
+         "tasks" : [
+            {
+               "type" : "xlrelease.CustomScriptTask",
+               "$lastModifiedAt" : "2017-03-01T06:09:24.012+0000",
+               "overdueNotified" : false,
+               "flagComment" : "",
+               "waitForScheduledStartDate" : true,
+               "id" : "Applications/Release874779676/Phase850654443/Task750404404",
+               "flagStatus" : "OK",
+               "attachments" : [],
+               "comments" : [],
+               "hasBeenFlagged" : true,
+               "pythonScript" : {
+                  "$lastModifiedBy" : "admin",
+                  "customScriptTask" : "Applications/Release874779676/Phase850654443/Task750404404",
+                  "$createdAt" : "2017-03-01T06:09:15.771+0000",
+                  "data" : {},
+                  "$createdBy" : "admin",
+                  "id" : "Applications/Release874779676/Phase850654443/Task750404404/PythonScript",
+                  "type" : "versionone.getStories",
+                  "$lastModifiedAt" : "2017-03-01T06:09:24.013+0000",
+                  "versionOneServer" : "Configuration/Custom/Configuration2139581"
+               },
+               "title" : "Approve Stage",
+               "$lastModifiedBy" : "admin",
+               "$createdBy" : "admin",
+               "hasBeenDelayed" : false,
+               "status" : "PLANNED",
+               "variableMapping" : {},
+               "$createdAt" : "2017-03-01T06:09:15.770+0000",
+               "failuresCount" : 0,
+               "container" : "Applications/Release874779676/Phase850654443",
+               "tags" : []
+            },
+            {
+               "hasBeenDelayed" : false,
+               "status" : "PLANNED",
+               "$createdBy" : "admin",
+               "conditions" : [],
+               "dependencies" : [],
+               "tags" : [],
+               "$createdAt" : "2017-03-01T06:08:10.558+0000",
+               "failuresCount" : 0,
+               "container" : "Applications/Release874779676/Phase850654443",
+               "variableMapping" : {},
+               "overdueNotified" : false,
+               "waitForScheduledStartDate" : true,
+               "id" : "Applications/Release874779676/Phase850654443/Task58764079",
+               "type" : "xlrelease.GateTask",
+               "$lastModifiedAt" : "2017-03-01T06:08:10.558+0000",
+               "hasBeenFlagged" : false,
+               "title" : "GATE",
+               "$lastModifiedBy" : "admin",
+               "comments" : [],
+               "flagStatus" : "OK",
+               "attachments" : []
+            }
+         ],
+         "$lastModifiedAt" : "2017-03-01T06:09:15.838+0000",
+         "type" : "xlrelease.Phase"
+      }
+   ],
+   "memberViewers" : [],
+   "realFlagStatus" : "OK",
+   "allowConcurrentReleasesFromTrigger" : true,
+   "$lastModifiedBy" : "admin",
+   "releaseTriggers" : [],
+   "title" : "VersionOneTickets",
+   "roleViewers" : [],
+   "createdFromTrigger" : false,
+   "flagStatus" : "OK",
+   "attachments" : [],
+   "id" : "Applications/Release874779676",
+   "scheduledStartDate" : "2017-02-27T14:00:00Z",
+   "tutorial" : false,
+   "calendarPublished" : false,
+   "extensions" : [],
+   "runningTriggeredReleasesCount" : 0,
+   "$lastModifiedAt" : "2017-03-01T06:09:32.856+0000",
+   "variables" : [],
+   "type" : "xlrelease.Release",
+   "teams" : [
+      {
+         "teamName" : "Release Admin",
+         "members" : [],
+         "permissions" : [
+            "release#edit",
+            "release#reassign_task",
+            "release#start",
+            "template#view",
+            "release#abort",
+            "release#edit_security",
+            "release#edit_task",
+            "release#view"
+         ],
+         "roles" : [],
+         "id" : "Applications/Release874779676/Team396091532",
+         "type" : "xlrelease.Team"
+      },
+      {
+         "type" : "xlrelease.Team",
+         "teamName" : "Template Owner",
+         "roles" : [],
+         "permissions" : [
+            "template#edit",
+            "template#view",
+            "template#create_release",
+            "template#edit_security",
+            "template#edit_triggers"
+         ],
+         "id" : "Applications/Release874779676/Team666327969",
+         "members" : [
+            "admin"
+         ]
+      }
+   ]
+}
+]
