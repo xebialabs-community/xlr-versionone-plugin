@@ -16,7 +16,7 @@ try:
    data['Name'] = asset['Attributes']['Name']['value']
    data['Number'] = asset['Attributes']['Number']['value']
    data['Status'] = asset['Attributes']['Status.Name']['value']
-   print data
+   print( data )
 except :
    traceback.print_exc(file=sys.stdout)
    sys.exit(1)

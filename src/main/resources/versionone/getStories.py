@@ -12,16 +12,16 @@ try:
    assets = results['Assets']
    data = {}
    for asset in assets:
-      print asset
-      print asset['Attributes']['Name']
+      print( asset )
+      print( asset['Attributes']['Name'] )
       assetName   = asset['Attributes']['Name']['value']
-      print asset['Attributes']['Number']
+      print( asset['Attributes']['Number'] )
       assetNumber = asset['Attributes']['Number']['value']
-      print asset['Attributes']['Status.Name']
+      print( asset['Attributes']['Status.Name'] )
       assetStatus = asset['Attributes']['Status.Name']['value']
       data[assetNumber] = "%s | %s " % (assetName, assetStatus )
    # End for
-   print data
+   print( data )
 
 except :
    traceback.print_exc(file=sys.stdout)
