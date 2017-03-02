@@ -7,22 +7,16 @@ import sys, traceback
 from versionone.VersionOneClient import VersionOneClient
 
 try:
-   v1Client = VersionOneClient.create_v1Client( versionOneServer )
-   results = v1Client.getStories( whereClause )
-   assets = results['Assets']
    data = {}
-   for asset in assets:
-      print asset
-      print asset['Attributes']['Name']
-      assetName   = asset['Attributes']['Name']['value']
-      print asset['Attributes']['Number']
-      assetNumber = asset['Attributes']['Number']['value']
-      print asset['Attributes']['Status.Name']
-      assetStatus = asset['Attributes']['Status.Name']['value']
-      data[assetNumber] = "%s | %s " % (assetName, assetStatus )
-   # End for
+   v1Client = VersionOneClient.create_v1Client( versionOneServer )
+   v1Client.updateStoryStatus( ticket, status )
+   whereClause="Number='%s'" % ticket
+   results = v1Client.getStories( whereClause )
+   asset = results['Assets'][0]
+   data['Name'] = asset['Attributes']['Name']['value']
+   data['Number'] = asset['Attributes']['Number']['value']
+   data['Status'] = asset['Attributes']['Status.Name']['value']
    print data
-
 except :
    traceback.print_exc(file=sys.stdout)
    sys.exit(1)
