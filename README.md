@@ -6,7 +6,7 @@ See the **XL Release Reference Manual** for background information on XL Release
 
 # CI status #
 
-[![Build Status](https://travis-ci.org/xebialabs-community/xlr-versionone-plugin.svg?branch=master)](https://travis-ci.org/xebialabs-community/xlr-versionone-plugin)
+[![Build Status](https://travis-ci.org/xebialabs-community/xlr-versionone-plugin.svg?branch=master)](https://travis-ci.org/xebialabs-community/xlr-versionone-plugin)[![Codacy Badge](https://api.codacy.com/project/badge/Grade/3bd6ed9416e649e4922b46a13fb3e615)](https://www.codacy.com/app/zvercodebender/xlr-versionone-plugin?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=xebialabs-community/xlr-versionone-plugin&amp;utm_campaign=Badge_Grade)[![Code Climate](https://codeclimate.com/github/xebialabs-community/xlr-versionone-plugin/badges/gpa.svg)](https://codeclimate.com/github/xebialabs-community/xlr-versionone-plugin)
 
 # Overview #
 
