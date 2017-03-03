@@ -3,7 +3,6 @@
 # IMPLIED, INCLUDING BUT NOT LIMITED TO THE IMPLIED WARRANTIES OF MERCHANTABILITY AND/OR FITNESS
 # FOR A PARTICULAR PURPOSE. THIS CODE AND INFORMATION ARE NOT SUPPORTED BY XEBIALABS.
 #
-import sys, traceback
 import com.xhaus.jyson.JysonCodec as json
 from xlrelease.HttpRequest import HttpRequest
 
@@ -19,14 +18,13 @@ class VersionOneClient( object ):
       self.optionHeader = {"Accept" : "application/json",
                            "Authorization" : "Bearer %s" % self.Token}
    # End def
-      
+
    @staticmethod
    def create_v1Client( v1CI ):
       return VersionOneClient( v1CI )
    # End def
    
    def getStories(self, whereClause=None):
-      data = {"data" : "FAIL"}
       uri = "%s/rest-1.v1/Data/Story" % self.uriBase
       if whereClause is not None:
          uri = "%s?where=%s" % ( uri, whereClause )
