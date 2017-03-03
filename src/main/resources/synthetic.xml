@@ -51,7 +51,7 @@
     <type type="versionone.Server" extends="configuration.HttpConnection">
         <property name="uriBase"     required="false" label="URL Base" />
         <property name="accessToken" required="true"  label="Access Token"  password="true" description="The access token associated with the VersionOne member account that you want to connect with" />
-        <property name="StoryStatus" required="false" kind="map_string_string" default="In Progress:134, Future:133"/>
+        <property name="StoryStatus" required="false" kind="map_string_string" />
     </type>
 
 
