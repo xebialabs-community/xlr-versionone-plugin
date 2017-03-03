@@ -59,4 +59,17 @@ class VersionOneClient( object ):
       raise ValueError('Error getting stories', reqStatus )
    # End def
    
+   def getStoryStatusList( self ):
+      data = {"data" : "FAIL"}
+      uri = "%s/rest-1.v1/Data/StoryStatus" % self.uriBase
+      print( "getStoryStatus uri = %s" % uri )
+      print( "Headers = %s" % self.optionHeader )
+      response = self.httpRequest.get( uri, headers=self.optionHeader )
+      reqStatus = response.getStatus()
+      print( "Request Status %s" % reqStatus )
+      if reqStatus == STATUS_OK:
+         return json.loads( response.getResponse() )
+      # End if
+      raise ValueError('Error getting stories', reqStatus )
+   # End def
 # End class
