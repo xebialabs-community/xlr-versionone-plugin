@@ -6,7 +6,7 @@ See the **XL Release Reference Manual** for background information on XL Release
 
 # CI status #
 
-[![Build Status](https://travis-ci.org/xebialabs-community/xlr-versionone-plugin.svg?branch=master)](https://travis-ci.org/xebialabs-community/xlr-versionone-plugin)
+[![Build Status](https://travis-ci.org/xebialabs-community/xlr-versionone-plugin.svg?branch=master)](https://travis-ci.org/xebialabs-community/xlr-versionone-plugin)[![Codacy Badge](https://api.codacy.com/project/badge/Grade/3bd6ed9416e649e4922b46a13fb3e615)](https://www.codacy.com/app/zvercodebender/xlr-versionone-plugin?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=xebialabs-community/xlr-versionone-plugin&amp;utm_campaign=Badge_Grade)[![Code Climate](https://codeclimate.com/github/xebialabs-community/xlr-versionone-plugin/badges/gpa.svg)](https://codeclimate.com/github/xebialabs-community/xlr-versionone-plugin)
 
 # Overview #
 
@@ -35,4 +35,45 @@ See the **XL Release Reference Manual** for background information on XL Release
 `./gradlew clean assemble`
 
 And copy the `jar` from `build/libs` into your plugins folder.
+
+## Server Configuration
+
+You need to create a *Shared Configuration* for you **Version One Server**.  The *Shared Configuration* will have the information to connect to you **Version One Server** in addition to some mappings for the underlying indexes in **Version One** to Story Statuses.
+
+## Release Tasks
+
+### Create Issue
+This task allows you to create new issues in **Version One**
+
+![Server Config](images/V1_ServerConfig.png)
+
+
+### Get Stories
+This task allows you to get a list of the stories available in **Version One** based on a query.  There are several exampes of queries available on the **Verson One** site.  For details of the **Version One** query language 
+
+![GetStroies](images/GetStories.png)
+
+
+### Get Story
+Only one story is returned for this task.  Details of the story will be contained in the **Data** field
+
+![GetStory](images/GetStory.png)
+
+
+### Update Story Status
+Using the key words in the server configuration you can update the story status.
+
+![UpdateStoryStatus](images/UpdateStoryStatus.png)
+
+
+---
+
+## References
+
+1. [www.versionone.com](https://www.versionone.com/)
+2. [community.versionone.com](https://community.versionone.com/)
+3. [VersionOne.SDK.Java.APIClient](http://versionone.github.io/VersionOne.SDK.Java.APIClient/)
+4. [Version One Sample Code](https://community.versionone.com/VersionOne_Connect/Developer_Library/Sample_Code)
+5. [REST APIs walkthrough](https://github.com/versionone/api-examples/blob/master/rest/apis-walkthrough.md)
+
 

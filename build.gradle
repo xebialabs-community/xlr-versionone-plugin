@@ -1,13 +1,18 @@
 plugins {
     id "com.github.hierynomus.license" version "0.12.1"
+    id "com.xebialabs.xlr.docker" version "1.1.12"
 }
 
 
-version="1.0.1"
+version="2.0.1"
 
 apply plugin: 'java'
 apply plugin: 'idea'
 apply plugin: 'eclipse'
+
+xlrDocker {
+    version = 'v6.1.0.1'
+}
 
 dependencies {
     compile 'com.versionone:VersionOne.SDK.Java.APIClient:15.1.2'
@@ -15,5 +20,6 @@ dependencies {
 
 license {
     header rootProject.file('src/main/license/xebialabs_community.license')
-    strictCheck true
+    strictCheck false
+    excludes(["**/*.json", "**/*png"])
 }
