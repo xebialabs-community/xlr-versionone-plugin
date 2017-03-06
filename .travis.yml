@@ -7,8 +7,8 @@ notifications:
 deploy:
   provider: releases
   api_key:
-    secure: ci1Ja2njoWo/LS3JV1cLH0nHLqVQVH3nIUXEQ23cYlDbkblvVO2Eecfv8XA43O+56pNcUmKBOecSFnYWGfc/mTEKUNs1Cx8BLhalDXXeYonoJaCEhxylwmsKSk5QeZNLN+yNVQGTVbXmQ/cBu9Conmyiof35zzxpWs4vbfVTn3U=
-  file: build/libs/xlr-versionone-plugin-2.0.1.jar
+    secure: kiEIBkxHo5fkXGXpN39lN7ugHjufdWJCu5BruGo4xDnP1jjxclezFeTkr1wd5Z0ZIiz8xorKZqZSfFi9u21ZnJc0qphSOrWF4E1Mi10FxAddp51MzO1bwdELflk0oEZ1YCaQTnHfhcO2Y/rDlvxtJTMZ+IRP8EMlO6bF83Jft0M=
+  file: build/libs/xlr-versionone-plugin-2.0.0.jar
   skip_cleanup: true
   on:
     all_branches: true
