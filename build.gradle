@@ -11,7 +11,7 @@ apply plugin: 'idea'
 apply plugin: 'eclipse'
 
 xlrDocker {
-    version = 'v6.1.0.1'
+    version = 'v7.2.0.1'
 }
 
 dependencies {
