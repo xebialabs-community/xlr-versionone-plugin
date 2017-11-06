@@ -1,8 +1,13 @@
 #
-# THIS CODE AND INFORMATION ARE PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESSED OR
-# IMPLIED, INCLUDING BUT NOT LIMITED TO THE IMPLIED WARRANTIES OF MERCHANTABILITY AND/OR FITNESS
-# FOR A PARTICULAR PURPOSE. THIS CODE AND INFORMATION ARE NOT SUPPORTED BY XEBIALABS.
+# Copyright 2017 XEBIALABS
 #
+# Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+#
+# The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+#
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+#
+
 import com.xhaus.jyson.JysonCodec as json
 from xlrelease.HttpRequest import HttpRequest
 
@@ -57,17 +62,16 @@ class VersionOneClient( object ):
       raise ValueError('Error getting stories', reqStatus )
    # End def
    
-   def getStoryStatusList( self ):
-      data = {"data" : "FAIL"}
+   def get_story_status_list(self):
       uri = "%s/rest-1.v1/Data/StoryStatus" % self.uriBase
       print( "getStoryStatus uri = %s" % uri )
       print( "Headers = %s" % self.optionHeader )
       response = self.httpRequest.get( uri, headers=self.optionHeader )
-      reqStatus = response.getStatus()
-      print( "Request Status %s" % reqStatus )
-      if reqStatus == STATUS_OK:
+      req_status = response.getStatus()
+      print( "Request Status %s" % req_status )
+      if req_status == STATUS_OK:
          return json.loads( response.getResponse() )
       # End if
-      raise ValueError('Error getting stories', reqStatus )
+      raise ValueError('Error getting stories', req_status )
    # End def
 # End class
