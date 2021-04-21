@@ -1,3 +1,6 @@
+XL Release VersionOne plugin is deprecated now as the plugin is insourced to xebialabs organization.
+The plugin is available on https://github.com/xebialabs/xlr-agility-integration
+
 # Preface #
 
 This document describes the functionality provided by the xlr-versionone-plugin.
