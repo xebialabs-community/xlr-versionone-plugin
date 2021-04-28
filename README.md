@@ -1,4 +1,4 @@
-XL Release VersionOne plugin is deprecated now as the plugin is insourced to xebialabs organization.
+XL Release VersionOne plugin is deprecated now as the plugin is insourced to Digital.ai organization.
 The plugin is available on https://github.com/xebialabs/xlr-agility-integration
 
 # Preface #
